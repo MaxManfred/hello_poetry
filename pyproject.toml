@@ -1,0 +1,41 @@
+# For a more complete example, have a look at
+# https://drgabrielharris.medium.com/python-how-using-poetry-make-and-pre-commit-hooks-to-setup-a-repo-template-for-your-ds-team-15b5a77d0e0f
+
+[tool.poetry]
+name = "hello-poetry"
+version = "0.1.0"
+description = ""
+authors = ["Massimo Manfredino <massimo.manfredino@dxc.com>"]
+readme = "README.md"
+packages = [{include = "hello_poetry", from = "src"}]
+
+[tool.poetry.dependencies]
+# https://python-poetry.org/docs/dependency-specification/
+python = "^3.10"
+pyspark = "3.3.2"
+
+[tool.poetry.dev-dependencies]
+# https://python-poetry.org/docs/dependency-specification/
+pytest = "^6.2.5"
+#black = "*"
+#flake8 = "*"
+#isort = "*"
+#nbstripout = "*"
+#pydocstyle = {extras = ["toml"], version = "*"}
+#notebook = "*"
+#rich = "*"
+#pre-commit = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+#[tool.black]
+#line-length = 88
+#
+#[tool.isort]
+#profile = 'black'
+#
+#[tool.pydocstyle]
+#convention = "google"
+#add-ignore = "D100,D101,D102,D103,D104,D105,D106,D107"
